@@ -5,6 +5,7 @@ alias l="ls -G"
 
 # Shortcuts
 alias d="cd ~/Dropbox"
+alias s="cd ~/Dropbox/sandbox"
 alias www="python -m SimpleHTTPServer 8000"
 
 # Detect which `ls` flavor is in use

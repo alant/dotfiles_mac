@@ -32,3 +32,8 @@
 (ac-set-trigger-key "<tab>")
 
 
+(require 'ido)
+(ido-mode t)
+
+;(require 'python-mode)
+(elpy-enable)
