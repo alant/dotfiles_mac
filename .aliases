@@ -1,7 +1,6 @@
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
-alias l="ls -G"
 
 # Shortcuts
 alias d="cd ~/Dropbox"
