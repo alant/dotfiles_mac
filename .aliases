@@ -4,7 +4,10 @@ alias ...="cd ../.."
 
 # Shortcuts
 alias d="cd ~/Dropbox"
+alias s="cd ~/Dropbox/sandbox"
+alias gd="cd ~/Google\ Drive/Documents"
 alias www="python -m SimpleHTTPServer 8000"
+alias l="ls -G"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
