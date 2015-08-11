@@ -1,8 +1,10 @@
 (global-set-key [(control h)] 'delete-backward-char)
-(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 
 (add-hook 'js-mode-hook 'js2-minor-mode)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
+(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
 
 ;;; Emacs is not a package manager, and here we load its package manager!
 (require 'package)
@@ -37,3 +39,27 @@
 
 ;(require 'python-mode)
 (elpy-enable)
+
+(defun pbcopy ()
+  (interactive)
+  (call-process-region (point) (mark) "pbcopy")
+  (setq deactivate-mark t))
+
+(defun pbpaste ()
+  (interactive)
+  (call-process-region (point) (if mark-active (mark) (point)) "pbpaste" t t))
+
+(defun pbcut ()
+  (interactive)
+  (pbcopy)
+  (delete-region (region-beginning) (region-end)))
+
+(global-set-key (kbd "C-c c") 'pbcopy)
+(global-set-key (kbd "C-c v") 'pbpaste)
+(global-set-key (kbd "C-c x") 'pbcut)
+
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+;; (require 'smart-tab)
+;;     (global-smart-tab-mode 1)
