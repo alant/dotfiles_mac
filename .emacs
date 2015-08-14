@@ -63,3 +63,14 @@
 
 ;; (require 'smart-tab)
 ;;     (global-smart-tab-mode 1)
+
+(show-paren-mode 1)
+
+(setq js2-basic-offset 2)
+
+;; Linum mode
+(global-linum-mode t)
+;; Offset the number by two spaces to work around some weird fringe glitch
+(setq linum-format " %d  ")
+(set-face-attribute 'linum nil :background "grey")
+
