@@ -71,6 +71,20 @@
 ;; Linum mode
 (global-linum-mode t)
 ;; Offset the number by two spaces to work around some weird fringe glitch
-(setq linum-format " %d  ")
-(set-face-attribute 'linum nil :background "grey")
+(setq linum-format " %d ")
+;(set-face-attribute 'linum nil :background "grey")
 
+ (load-theme 'leuven t)
+;(load-theme 'zenburn t)
+
+; open in the same window
+(setq ns-pop-up-frames nil)
+
+;;; activate ecb
+(require 'ecb)
+(ecb-activate)
+
+;resize window with ecb
+(when window-system (set-frame-size (selected-frame) 110 50))
+
+(require 'fill-column-indicator)
