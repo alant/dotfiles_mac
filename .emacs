@@ -74,7 +74,7 @@
 (setq linum-format " %d ")
 ;(set-face-attribute 'linum nil :background "grey")
 
- (load-theme 'leuven t)
+(load-theme 'leuven t)
 ;(load-theme 'zenburn t)
 
 ; open in the same window
@@ -82,9 +82,10 @@
 
 ;;; activate ecb
 (require 'ecb)
-(ecb-activate)
+;(ecb-activate)
 
 ;resize window with ecb
 (when window-system (set-frame-size (selected-frame) 110 50))
 
 (require 'fill-column-indicator)
+(setq column-number-mode t)
