@@ -1,8 +1,0 @@
-# Easier navigation: .., ..., ...., ....., ~ and -
-alias ..="cd .."
-alias ...="cd ../.."
-# Shortcuts
-alias www="python -m SimpleHTTPServer 8000"
-alias l="ls -G"
-alias aws="ssh aws -t tmux a"
-

@@ -1,3 +1,5 @@
+"open new file: E37: No write since last change (add ! to override) 
+set hidden
 set pastetoggle=<F2>
 set showmode
 syntax on
