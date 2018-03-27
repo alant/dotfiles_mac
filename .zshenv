@@ -11,7 +11,7 @@ alias vla="ssh vla -t tmux a"
 alias d="cd ~/Dropbox"
 alias s="cd ~/baiduyun/sandbox"
 alias gd="cd ~/Google\ Drive/Documents"
-alias www="python -m SimpleHTTPServer 8000"
+alias www="python2 -m SimpleHTTPServer 8000"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
