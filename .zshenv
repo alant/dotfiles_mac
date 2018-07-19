@@ -9,8 +9,7 @@ alias vla="ssh vla -t tmux a"
 
 # Shortcuts
 alias d="cd ~/Dropbox"
-alias s="cd ~/baiduyun/sandbox"
-alias gd="cd ~/Google\ Drive/Documents"
+alias sb="cd ~/Developer/sandbox"
 alias www="python2 -m SimpleHTTPServer 8000"
 
 # Detect which `ls` flavor is in use
