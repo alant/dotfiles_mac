@@ -2,8 +2,8 @@ dotfiles_mac
 ============
 ```sh
 mkdir ~/.vim ~/.vim/.backup ~/.vim/.swp ~/.vim/.undo
-cp ~/dotfiles_mac/.vimrc .
-cp ~/dotfiles_mac/.zshenv .
+cp dotfiles_mac/.vimrc ~/
+cp dotfiles_mac/.zshenv ~/
 ```
 
 install zsh
