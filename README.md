@@ -4,7 +4,7 @@ dotfiles_mac
 mkdir ~/.vim ~/.vim/.backup ~/.vim/.swp ~/.vim/.undo
 cp ~/dotfiles_mac/.vimrc .
 cp ~/dotfiles_mac/.zshenv .
-```sh
+```
 
 install zsh
 
