@@ -10,5 +10,5 @@ alias vla="ssh vla -t tmux a"
 # Shortcuts
 alias d="cd ~/Dropbox"
 alias sb="cd ~/Developer/sandbox"
-alias www="python2 -m SimpleHTTPServer 8000"
+alias www="python2.7 -m SimpleHTTPServer 8000"
 
