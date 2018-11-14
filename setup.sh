@@ -42,8 +42,24 @@ if [ ! -d ~/.vim/.undo ]; then
     mkdir ~/.vim/.undo
 fi
 
-echo "Copying .vimrc to ~/ ..."
-cp .vimrc ~/
+DATE=$(date +"%Y%m%d%H%M")
 
-echo "Copying .zshenv to ~/ ..."
-cp .zshenv ~/
+if [ ! -f ~/.vimrc ]; then
+  echo "Copying .vimrc to ~/ ..."
+  cp .vimrc ~/
+else
+  echo "Backing up .vimrc in ~/ ..."
+  mv ~/.vimrc ~/.vimrc.backup.$DATE
+  echo "Copying .vimrc to ~/ ..."
+  cp .vimrc ~/
+fi
+
+if [ ! -f ~/.zshenv ]; then
+  echo "Copying .zshenv to ~/ ..."
+  cp .zshenv ~/
+else
+  echo "Backing up .zshenv in ~/ ..."
+  mv ~/.zshenv ~/.zshenv.backup.$DATE
+  echo "Copying .zshenv to ~/ ..."
+  cp .zshenv ~/
+fi
