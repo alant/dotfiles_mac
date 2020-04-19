@@ -71,12 +71,22 @@ else
   cp .zshenv ~/
 fi
 
-if [ ! -f ~/.inputrc]; then
+if [ ! -f ~/.inputrc ]; then
   echo "Copying .inputrc to ~/ ..."
   cp .inputrc ~/
 else
   echo "Backing up .inputrc in ~/ ..."
-  mv ~/.inputrc ~/.zshenv.backup.$DATE
+  mv ~/.inputrc ~/.inputrc.backup.$DATE
   echo "Copying .inputrc to ~/ ..."
   cp .inputrc ~/
+fi
+
+if [ ! -f ~/.spacemacs ]; then
+    echo "Copying .spacemacs to ~/ ..."
+    cp .spacemacs ~/
+else
+    echo "Backing up .spacemacs in ~/ ..."
+    mv ~/.spacemacs ~/.spacemacs.backup.$DATE
+    echo "Copying .spacemacs to ~/ ..."
+    cp .spacemacs ~/
 fi
