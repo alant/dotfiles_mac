@@ -31,7 +31,6 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     multiple-cursors
      org
      auto-completion
      evil-commentary
