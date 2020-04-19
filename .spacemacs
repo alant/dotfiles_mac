@@ -1,5 +1,3 @@
-(setq markdown-fontify-code-blocks-natively t)
-
 ;; -*- mode: emacs-lisp -*-
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
@@ -33,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     multiple-cursors
      org
      auto-completion
      evil-commentary
@@ -317,6 +316,13 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (with-eval-after-load 'org
+    (setq org-todo-keywords
+          '((sequence "todo" "doing" "blocked" "waiting" "|" "done" "deferred"))))
+  (with-eval-after-load 'org
+    (setq org-log-done 'time))
+  (setq org-startup-truncated nil)
+  (setq markdown-fontify-code-blocks-natively t)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
