@@ -12,6 +12,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 post install steps:
     * oh-my-zsh's theme: simplified powerlevel and fonts
     * get spaceemacs
+    * install font-source-code-pro which spacemacs uses by default and doesn't come with mac
 2. add ```source $HOME/.bash_profile``` in front of .zshrc. So things like npm and anaconda installed python3 will be found by zsh 
 
 3. turn off “scrolling the history” in iTerm2:
