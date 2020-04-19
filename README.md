@@ -10,37 +10,37 @@ dotfiles_mac
   ./setup.sh
   ```
 
-  1. post install steps:
-    * oh-my-zsh's theme: simplified powerlevel and fonts
-    * get spaceemacs
-    * install font-source-code-pro which spacemacs uses by default and doesn't come with Mac
-    * do a diff of backed up .spacemacs and copied one to check all the changes are correct with diff tracking here
+    1. post install steps:
+        * oh-my-zsh's theme: simplified powerlevel and fonts
+        * get spaceemacs
+        * install font-source-code-pro which spacemacs uses by default and doesn't come with Mac
+        * do a diff of backed up .spacemacs and copied one to check all the changes are correct with diff tracking here
 
-    .spacemacs changes tracked here:
-      ```
-      (setq markdown-fontify-code-blocks-natively t)
+        .spacemacs changes tracked here:
+          ```
+          (setq markdown-fontify-code-blocks-natively t)
 
-      ;; List of configuration layers to load.
-      dotspacemacs-configuration-layers
-      '(
-        auto-completion
-        evil-commentary
-        markdown
-        ...
-        git
-      ...
-      dotspacemacs-additional-packages '(
-                                  transpose-frame
-                                  )
-      ...
-      dotspacemacs-default-font '("Source Code Pro"
-                            :size 15
-      ...
-      dotspacemacs-distinguish-gui-tab t
-      ...
-      dotspacemacs-auto-resume-layouts t
-      ...
-      ```
+          ;; List of configuration layers to load.
+          dotspacemacs-configuration-layers
+          '(
+            auto-completion
+            evil-commentary
+            markdown
+            ...
+            git
+          ...
+          dotspacemacs-additional-packages '(
+                                      transpose-frame
+                                      )
+          ...
+          dotspacemacs-default-font '("Source Code Pro"
+                                :size 15
+          ...
+          dotspacemacs-distinguish-gui-tab t
+          ...
+          dotspacemacs-auto-resume-layouts t
+          ...
+          ```
 
 2. add ```source $HOME/.bash_profile``` in front of .zshrc. So things like npm and anaconda installed python3 will be found by zsh
 
