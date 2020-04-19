@@ -14,6 +14,9 @@ dotfiles_mac
         * oh-my-zsh's theme: simplified powerlevel and fonts
         * get spaceemacs
         * install font-source-code-pro which spacemacs uses by default and doesn't come with Mac
+            ```bash
+            brew tap homebrew/cask-fonts && brew cask install font-source-code-pro
+            ```
         * do a diff of backed up .spacemacs and copied one to check all the changes are correct with diff tracking here
 
         .spacemacs changes tracked here:
