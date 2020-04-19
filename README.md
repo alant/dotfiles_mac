@@ -10,7 +10,7 @@ dotfiles_mac
   ./setup.sh
   ```
 
-  1.1 post install steps:
+  1. post install steps:
     * oh-my-zsh's theme: simplified powerlevel and fonts
     * get spaceemacs
     * install font-source-code-pro which spacemacs uses by default and doesn't come with Mac
