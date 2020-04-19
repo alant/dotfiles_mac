@@ -22,6 +22,13 @@ if test ! $(which autojump); then
     echo "[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh" >> ~/.zshrc
 fi
 
+if test ! $(which emacs); then
+    echo "Installing emacs plus..."
+    brew tap d12frosted/emacs-plus
+    brew install emacs-plus
+    brew linkapps emacs-plus
+fi
+
 if [ ! -d ~/.vim ]; then
     echo "Creating vim folders ..."
     mkdir ~/.vim
@@ -62,4 +69,14 @@ else
   mv ~/.zshenv ~/.zshenv.backup.$DATE
   echo "Copying .zshenv to ~/ ..."
   cp .zshenv ~/
+fi
+
+if [ ! -f ~/.inputrc]; then
+  echo "Copying .inputrc to ~/ ..."
+  cp .inputrc ~/
+else
+  echo "Backing up .inputrc in ~/ ..."
+  mv ~/.inputrc ~/.zshenv.backup.$DATE
+  echo "Copying .inputrc to ~/ ..."
+  cp .inputrc ~/
 fi

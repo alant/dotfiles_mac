@@ -1,3 +1,6 @@
+set -o vi
+bindkey '^R' history-incremental-search-backward
+
 #Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
