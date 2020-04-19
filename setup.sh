@@ -26,7 +26,7 @@ if test ! $(which emacs); then
     echo "Installing emacs plus..."
     brew tap d12frosted/emacs-plus
     brew install emacs-plus
-    brew linkapps emacs-plus
+    ln -s /usr/local/opt/emacs-plus/Emacs.app /Applications
 fi
 
 if [ ! -d ~/.vim ]; then
